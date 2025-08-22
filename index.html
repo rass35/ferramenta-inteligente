@@ -13,195 +13,59 @@
     margin: 30px auto;
     padding: 20px;
   }
-  h1 {
-    color: #00ffff;
-    text-align: center;
-    margin-bottom: 30px;
-  }
+  h1 { color: #00ffff; text-align: center; margin-bottom: 30px; }
+
   /* Abas */
-  .tabs {
-    display: flex;
-    border-bottom: 2px solid #00ffff;
-    margin-bottom: 20px;
-    cursor: pointer;
-    user-select: none;
-  }
-  .tab {
-    flex: 1;
-    padding: 12px 20px;
-    text-align: center;
-    background: #1a1a1a;
-    color: #00ffff;
-    font-weight: bold;
-    border-radius: 8px 8px 0 0;
-    margin-right: 4px;
-    transition: background 0.3s;
-  }
-  .tab:last-child {
-    margin-right: 0;
-  }
-  .tab.active {
-    background: #00ffff;
-    color: #000;
-    cursor: default;
-  }
+  .tabs { display: flex; border-bottom: 2px solid #00ffff; margin-bottom: 20px; cursor: pointer; user-select: none; }
+  .tab { flex: 1; padding: 12px 20px; text-align: center; background: #1a1a1a; color: #00ffff; font-weight: bold; border-radius: 8px 8px 0 0; margin-right: 4px; transition: background 0.3s; }
+  .tab:last-child { margin-right: 0; }
+  .tab.active { background: #00ffff; color: #000; cursor: default; }
 
   /* Conteúdo das abas */
-  .tab-content {
-    background: #1f1f1f;
-    padding: 20px;
-    border-radius: 0 8px 8px 8px;
-    box-shadow: 0 0 15px #00ffff66;
-  }
-  .tab-content > * {
-    max-width: 100%;
-  }
+  .tab-content { background: #1f1f1f; padding: 20px; border-radius: 0 8px 8px 8px; box-shadow: 0 0 15px #00ffff66; display: none; }
+  .tab-content.active { display: block; }
 
-  label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #00ffff;
-  }
-  input, textarea, select, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border-radius: 8px;
-    border: 1px solid #00ffff;
-    background: #1a1a1a;
-    color: #00ffcc;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-  textarea {
-    resize: vertical;
-  }
-  button {
-    margin-top: 20px;
-    background: linear-gradient(145deg, #00ffff, #00ccff);
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: none;
-  }
-  button:hover:not(:disabled) {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00ffff;
-  }
-  button:active:not(:disabled) {
-    box-shadow: 0 0 25px #00ffff, inset 0 0 10px #00ffff;
-  }
-  button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+  label { display: block; margin-top: 15px; font-weight: bold; color: #00ffff; }
+  input, textarea, select, button { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #00ffff; background: #1a1a1a; color: #00ffcc; font-size: 16px; box-sizing: border-box; }
+  textarea { resize: vertical; }
+  button { margin-top: 20px; background: linear-gradient(145deg, #00ffff, #00ccff); color: #000; font-weight: bold; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; border: none; }
+  button:hover:not(:disabled) { transform: scale(1.05); box-shadow: 0 0 15px #00ffff; }
+  button:active:not(:disabled) { box-shadow: 0 0 25px #00ffff, inset 0 0 10px #00ffff; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-  #resultado, #saida, #resultadoReescrita {
-    margin-top: 10px;
-    background: #121212;
-    padding: 15px;
-    border-radius: 8px;
-    white-space: pre-wrap;
-    font-family: monospace;
-    color: #00ffcc;
-    min-height: 110px;
-  }
-  #resultado-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 25px;
-  }
-  #resultado-label, #resultado-label-reescrita {
-    color: #00ffff;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  #copiarBtn {
-    width: auto;
-    max-width: 150px;
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-  #erro {
-    margin-top: 10px;
-    color: #ff4444;
-    font-weight: bold;
-  }
-  /* Estilo do botão do PicLumen */
-  #piclumenLink {
-    margin-top: 20px;
-    text-align: center;
-  }
-  #piclumenLink a {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #00ccff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  #piclumenLink a:hover {
-    background: #00aacc;
-  }
-  /* Botões lado a lado */
-  #botoes, #botoesReescrita {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  #botoes button, #botoesReescrita button {
-    flex: 1;
-  }
-  /* Divisor e Tradutor */
-  .bloco {
-    background: #121212;
-    border: 1px solid #00cccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    white-space: pre-wrap;
-    box-shadow: 0 0 10px #00cccc88;
-    position: relative;
-  }
-  .copiar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #00cccc;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    padding: 4px 8px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .copiar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #00ffff;
-  }
-  .copiar:active {
-    box-shadow: 0 0 15px #00ffff, inset 0 0 5px #00ffff;
-  }
+  #resultado, #saida, #resultadoReescrita, #outputGospel { margin-top: 10px; background: #121212; padding: 15px; border-radius: 8px; white-space: pre-wrap; font-family: monospace; color: #00ffcc; min-height: 110px; }
+
+  #resultado-container { display: flex; align-items: center; justify-content: space-between; margin-top: 25px; }
+  #resultado-label, #resultado-label-reescrita { color: #00ffff; font-weight: bold; font-size: 1.2em; }
+  #copiarBtn { width: auto; max-width: 150px; padding: 8px 15px; font-size: 14px; }
+  #erro { margin-top: 10px; color: #ff4444; font-weight: bold; }
+
+  #piclumenLink a { display: inline-block; padding: 12px 20px; background: #00ccff; color: #000; font-weight: bold; border-radius: 8px; text-decoration: none; transition: background 0.3s; }
+  #piclumenLink a:hover { background: #00aacc; }
+
+  #botoes, #botoesReescrita, #botoesGospel { display: flex; gap: 15px; margin-top: 20px; }
+  #botoes button, #botoesReescrita button, #botoesGospel button { flex: 1; }
+
+  .bloco { background: #121212; border: 1px solid #00cccc; border-radius: 8px; padding: 15px; margin-bottom: 15px; white-space: pre-wrap; box-shadow: 0 0 10px #00cccc88; position: relative; }
+  .copiar { position: absolute; top: 10px; right: 10px; background: #00cccc; color: #000; border: none; border-radius: 5px; padding: 4px 8px; font-size: 12px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+  .copiar:hover { transform: scale(1.1); box-shadow: 0 0 10px #00ffff; }
+  .copiar:active { box-shadow: 0 0 15px #00ffff, inset 0 0 5px #00ffff; }
 </style>
 </head>
 <body>
 
 <h1>Ferramentas Inteligentes</h1>
 
+<!-- Abas -->
 <div class="tabs">
   <div class="tab active" data-tab="prompt">Gerador de Prompt para Thumbnail</div>
   <div class="tab" data-tab="divisor">Divisor e Tradutor de Texto</div>
-  <div class="tab" data-tab="reescrita">Gerador de Prompt para Reescrever Texto - Gemini</div>
+  <div class="tab" data-tab="reescrita">Reescrever Texto - Gemini</div>
+  <div class="tab" data-tab="gospel">Gerador de Prompt Música Blues Gospel</div>
 </div>
 
 <!-- Aba Prompt Thumbnail -->
-<div id="prompt" class="tab-content">
+<div id="prompt" class="tab-content active">
   <label for="sujeito">Sujeito Principal</label>
   <input type="text" id="sujeito" placeholder="ex: Cantor de blues gospel, close-up, expressão intensa">
 
@@ -228,16 +92,13 @@
 
   <div id="resultado">Preencha os campos acima e clique em "Gerar Prompt".</div>
 
-  <!-- Link para o gerador PicLumen -->
   <div id="piclumenLink">
-    <a href="https://piclumen.com/app/pt/image/create" target="_blank" rel="noopener noreferrer">
-      Abrir Gerador de Imagem PicLumen
-    </a>
+    <a href="https://piclumen.com/app/pt/image/create" target="_blank" rel="noopener noreferrer">Abrir Gerador de Imagem PicLumen</a>
   </div>
 </div>
 
 <!-- Aba Divisor e Tradutor -->
-<div id="divisor" class="tab-content" style="display:none;">
+<div id="divisor" class="tab-content">
   <h2>🧠 Divisor e Tradutor de Texto Inteligente</h2>
   <textarea id="textoDivisor" placeholder="Insira seu texto aqui..."></textarea>
 
@@ -280,8 +141,8 @@
   <div id="saida"></div>
 </div>
 
-<!-- Aba Gerador de Prompt para Reescrever Texto - Gemini -->
-<div id="reescrita" class="tab-content" style="display:none;">
+<!-- Aba Reescrever Texto - Gemini -->
+<div id="reescrita" class="tab-content">
   <label for="textoOriginal">Texto Original</label>
   <textarea id="textoOriginal" rows="6" placeholder="Digite ou cole o texto a ser reescrito..."></textarea>
 
@@ -314,6 +175,41 @@
   <div id="resultadoReescrita">Preencha o texto, escolha o estilo e o idioma para gerar o prompt.</div>
 </div>
 
+<!-- Aba Gospel -->
+<div id="gospel" class="tab-content">
+  <label for="hymnName">Nome do Hino:</label>
+  <input type="text" id="hymnName" placeholder="Ex: Vem Cear">
+
+  <label for="style">Estilo Musical:</label>
+  <select id="style">
+    <option value="Blues Gospel">Blues Gospel</option>
+    <option value="New Orleans Blues">New Orleans Blues</option>
+    <option value="Soul Gospel">Soul Gospel</option>
+    <option value="Gospel Worship">Gospel Worship</option>
+    <option value="Jazz Gospel">Jazz Gospel</option>
+    <option value="R&B Gospel">R&B Gospel</option>
+    <option value="Funk Gospel">Funk Gospel</option>
+    <option value="Choir Gospel">Choir Gospel</option>
+    <option value="Contemporary Gospel">Contemporary Gospel</option>
+    <option value="Traditional Gospel">Traditional Gospel</option>
+    <option value="Blues Jazz Gospel">Blues Jazz Gospel</option>
+  </select>
+
+  <label for="voice">Voz Principal:</label>
+  <select id="voice">
+    <option value="deep male voice">Masculina</option>
+    <option value="smooth female voice">Feminina</option>
+  </select>
+
+  <div id="botoesGospel">
+    <button onclick="gerarPromptGospel()">Gerar Prompt</button>
+    <button onclick="limparCamposGospel()">Limpar</button>
+    <button onclick="copiarPromptGospel()">📋 Copiar Prompt</button>
+  </div>
+
+  <div id="outputGospel">Preencha o nome do hino e clique em "Gerar Prompt".</div>
+</div>
+
 <script>
   // Controle das abas
   const tabs = document.querySelectorAll('.tab');
@@ -322,12 +218,12 @@
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      contents.forEach(c => c.style.display = 'none');
-      document.getElementById(tab.dataset.tab).style.display = 'block';
+      contents.forEach(c => c.classList.remove('active'));
+      document.getElementById(tab.dataset.tab).classList.add('active');
     });
   });
 
-  // ===== Gerador de Prompt para Thumbnail =====
+  // ===== Função de tradução =====
   async function traduzir(texto, targetLang = 'en') {
     if (!texto.trim()) return "";
     try {
@@ -336,210 +232,81 @@
       const data = await res.json();
       return data[0].map(item => item[0]).join('');
     } catch (error) {
-      document.getElementById('erro').innerText = 'Erro na tradução: ' + error.message;
       console.error(error);
       return texto;
     }
   }
 
+  // ===== Prompt Thumbnail =====
   async function gerarPromptThumbnail() {
     document.getElementById('erro').innerText = '';
-
     const sujeitoPt = document.getElementById('sujeito').value.trim();
     const fundoPt = document.getElementById('fundo').value.trim();
     const efeitosPt = document.getElementById('efeitos').value.trim();
     const textoImg = document.getElementById('texto').value.trim();
-
     if (!sujeitoPt && !fundoPt && !efeitosPt && !textoImg) {
       document.getElementById('resultado').innerText = 'Preencha os campos acima e clique em "Gerar Prompt".';
       return;
     }
-
     const [sujeitoEn, fundoEn, efeitosEn] = await Promise.all([
       traduzir(sujeitoPt),
       traduzir(fundoPt),
       traduzir(efeitosPt)
     ]);
-
-    const textoExtra = `(stacked vertically without separators) is prominently placed in the free space (e.g., upper right or upper left third). The text is bold, professional, 3D white with a vibrant black fill/inner glow and a strong black outline, ensuring high contrast and legibility against the dark background. It features soft edges, a subtle drop shadow, and a professional, non-amateurish finish. The text is large, impactful, and legible at small thumbnail sizes, without cropping or distortion. The overall visual tone conveys intensity, raw emotion, and deep feeling, with vibrant background and text elements providing a strong contrast with the black and white type, creating a striking and compelling image. No additional text, lettering, logos, or written elements are present beyond the specified thumbnail text.`;
-
+    const textoExtra = `(stacked vertically without separators) is prominently placed...`;
     const prompt = `Professional hyper-realistic YouTube thumbnail. Close-up image, ${sujeitoEn || "[main subject here]"}. Background: ${fundoEn || "[background here]"}. Visual effects: ${efeitosEn || "[visual effects here]"}. Text: ${textoImg || "[text on image here]"} ${textoImg ? textoExtra : "[detailed text style description here]"}. Cinematic style, ultra-detailed, high contrast, Behance-inspired, designed for maximum click-through rate.`;
-
     document.getElementById('resultado').innerText = prompt;
   }
-
   function copiarPromptThumbnail() {
     const prompt = document.getElementById('resultado').innerText;
-    if (!prompt || prompt.includes('Preencha os campos')) {
-      alert('Nada para copiar!');
-      return;
-    }
-    navigator.clipboard.writeText(prompt).then(() => {
-      alert('✅ Prompt copiado para a área de transferência!');
-    });
+    if (!prompt || prompt.includes('Preencha')) { alert('Nada para copiar!'); return; }
+    navigator.clipboard.writeText(prompt).then(() => alert('✅ Prompt copiado!'));
   }
+  function limparCamposPrompt() { document.getElementById('sujeito').value=''; document.getElementById('fundo').value=''; document.getElementById('efeitos').value=''; document.getElementById('texto').value=''; document.getElementById('resultado').innerText='Preencha os campos acima e clique em "Gerar Prompt".'; document.getElementById('erro').innerText=''; }
 
-  function limparCamposPrompt() {
-    document.getElementById('sujeito').value = '';
-    document.getElementById('fundo').value = '';
-    document.getElementById('efeitos').value = '';
-    document.getElementById('texto').value = '';
-    document.getElementById('resultado').innerText = 'Preencha os campos acima e clique em "Gerar Prompt".';
-    document.getElementById('erro').innerText = '';
-  }
-
-  // ===== Divisor e Tradutor de Texto Inteligente =====
-  const taxaNormal = 15;
-  const taxaLento = 8;
-  const taxaRapido = 25;
+  // ===== Divisor e Tradutor =====
+  const taxaNormal = 15, taxaLento = 8, taxaRapido = 25;
   let partesGlobais = [];
-
-  document.getElementById('ferramenta').addEventListener('change', function () {
-    document.getElementById('customChars').style.display =
-      this.value === 'custom' ? 'block' : 'none';
-  });
-
-  function formatarTempo(segundos) {
-    const mm = String(Math.floor(segundos / 60)).padStart(2, '0');
-    const ss = String(segundos % 60).padStart(2, '0');
-    return `${mm}:${ss} (${segundos} segundos)`;
-  }
-
-  async function traduzirTexto(texto, idioma) {
-    try {
-      const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${idioma}&dt=t&q=${encodeURIComponent(texto)}`);
-      if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
-      const data = await res.json();
-      return data[0].map(t => t[0]).join('');
-    } catch (error) {
-      alert('Erro na tradução: ' + error.message);
-      return texto;
-    }
-  }
-
+  document.getElementById('ferramenta').addEventListener('change', function(){ document.getElementById('customChars').style.display = this.value==='custom'?'block':'none'; });
+  function formatarTempo(segundos){ const mm = String(Math.floor(segundos/60)).padStart(2,'0'); const ss = String(segundos%60).padStart(2,'0'); return `${mm}:${ss} (${segundos} segundos)`; }
+  async function traduzirTexto(texto, idioma){ try { const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${idioma}&dt=t&q=${encodeURIComponent(texto)}`); const data = await res.json(); return data[0].map(t=>t[0]).join(''); } catch(e){ alert('Erro na tradução: '+e.message); return texto; } }
   async function dividirTexto() {
-    const texto = document.getElementById('textoDivisor').value.trim();
-    let maxChars = parseInt(document.getElementById('ferramenta').value, 10);
-    if (isNaN(maxChars)) {
-      maxChars = parseInt(document.getElementById('customChars').value, 10) || texto.length;
-    }
-
-    if (!texto) {
-      alert('Por favor, insira um texto para dividir e traduzir.');
-      return;
-    }
-
-    const idioma = document.getElementById('idiomaDivisor').value;
-
-    const sentencas = texto.match(/[^.!?]+[.!?]+(\s|$)/g) || [texto];
-    const partes = [];
-    let blocoAtual = '';
-
-    for (let i = 0; i < sentencas.length; i++) {
-      const s = sentencas[i];
-      if ((blocoAtual + s).length <= maxChars) {
-        blocoAtual += s;
-      } else {
-        if (blocoAtual) partes.push(blocoAtual.trim());
-        blocoAtual = s;
-      }
-    }
-    if (blocoAtual) partes.push(blocoAtual.trim());
-
-    // Traduzir todas as partes em paralelo
-    partesGlobais = await Promise.all(partes.map(parte => traduzirTexto(parte, idioma)));
-
-    const total = texto.length;
-    const secNormal = Math.ceil(total / taxaNormal);
-    const secLento = Math.ceil(total / taxaLento);
-    const secRapido = Math.ceil(total / taxaRapido);
-
-    document.getElementById('tempo').innerHTML =
-      `Velocidade normal: ${formatarTempo(secNormal)}<br>` +
-      `Lento / Pausado: ${formatarTempo(secLento)}<br>` +
-      `Rápido / Dinâmico: ${formatarTempo(secRapido)}`;
-
-    const saida = document.getElementById('saida');
-    saida.innerHTML = '';
-    partesGlobais.forEach((parte, index) => {
-      const bloco = document.createElement('div');
-      bloco.className = 'bloco';
-      const btn = document.createElement('button');
-      btn.className = 'copiar';
-      btn.textContent = 'Copiar';
-      btn.onclick = () => {
-        navigator.clipboard.writeText(parte);
-        btn.textContent = 'Copiado!';
-        setTimeout(() => btn.textContent = 'Copiar', 1000);
-      };
-      bloco.innerHTML = `<strong>Parte ${index + 1}:</strong><br>` + parte;
-      bloco.appendChild(btn);
-      saida.appendChild(bloco);
-    });
+    const texto=document.getElementById('textoDivisor').value.trim();
+    let maxChars=parseInt(document.getElementById('ferramenta').value,10);
+    if(isNaN(maxChars)) maxChars=parseInt(document.getElementById('customChars').value,10)||texto.length;
+    if(!texto){ alert('Insira um texto'); return; }
+    const idioma=document.getElementById('idiomaDivisor').value;
+    const sentencas=texto.match(/[^.!?]+[.!?]+(\s|$)/g)||[texto];
+    const partes=[]; let blocoAtual='';
+    for(let s of sentencas){ if((blocoAtual+s).length<=maxChars){ blocoAtual+=s; } else { if(blocoAtual)partes.push(blocoAtual.trim()); blocoAtual=s; } }
+    if(blocoAtual) partes.push(blocoAtual.trim());
+    partesGlobais=await Promise.all(partes.map(parte=>traduzirTexto(parte, idioma)));
+    const total=texto.length, secNormal=Math.ceil(total/taxaNormal), secLento=Math.ceil(total/taxaLento), secRapido=Math.ceil(total/taxaRapido);
+    document.getElementById('tempo').innerHTML=`Velocidade normal: ${formatarTempo(secNormal)}<br> Lento / Pausado: ${formatarTempo(secLento)}<br> Rápido / Dinâmico: ${formatarTempo(secRapido)}`;
+    const saida=document.getElementById('saida'); saida.innerHTML='';
+    partesGlobais.forEach((parte,index)=>{ const bloco=document.createElement('div'); bloco.className='bloco'; const btn=document.createElement('button'); btn.className='copiar'; btn.textContent='Copiar'; btn.onclick=()=>{ navigator.clipboard.writeText(parte); btn.textContent='Copiado!'; setTimeout(()=>btn.textContent='Copiar',1000); }; bloco.innerHTML=`<strong>Parte ${index+1}:</strong><br>`+parte; bloco.appendChild(btn); saida.appendChild(bloco); });
   }
+  function limparTexto(){ document.getElementById('textoDivisor').value=''; document.getElementById('tempo').innerHTML=`Velocidade normal: 00:00 (0 segundos)<br>Lento / Pausado: 00:00 (0 segundos)<br>Rápido / Dinâmico: 00:00 (0 segundos)`; document.getElementById('saida').innerHTML=''; partesGlobais=[]; }
+  function exportarTexto(){ if(partesGlobais.length===0)return alert("Nenhuma parte para exportar."); const blob=new Blob([partesGlobais.join("\n\n")],{type:'text/plain'}); const link=document.createElement('a'); link.href=URL.createObjectURL(blob); link.download='partes_traduzidas.txt'; link.click(); }
 
-  function limparTexto() {
-    document.getElementById('textoDivisor').value = '';
-    document.getElementById('tempo').innerHTML =
-      `Velocidade normal: 00:00 (0 segundos)<br>` +
-      `Lento / Pausado: 00:00 (0 segundos)<br>` +
-      `Rápido / Dinâmico: 00:00 (0 segundos)`;
-    document.getElementById('saida').innerHTML = '';
-    partesGlobais = [];
+  // ===== Reescrita Gemini =====
+  function gerarPromptReescrita(){ const texto=document.getElementById('textoOriginal').value.trim(); const estilo=document.getElementById('estiloReescrita').value; const idioma=document.getElementById('idiomaReescrita').value; if(!texto){ alert('Insira o texto'); return; } const estilosPt={ formal:'formal, claro e profissional', informal:'informal, amigável e descontraído', criativo:'criativo e envolvente', conciso:'conciso e direto ao ponto', explicativo:'explicativo, detalhado e didático' }; const estiloPt=estilosPt[estilo]||estilo; const prompt=`Reescreva o texto abaixo em um estilo ${estiloPt}, preservando o significado original, mas usando palavras, frases e estruturas diferentes para evitar plágio. Garanta que o conteúdo seja único, fluido e natural. Escreva o texto em ${idioma}.\n\n"""${texto}"""`; document.getElementById('resultadoReescrita').innerText=prompt; }
+  function copiarPromptReescrita(){ const prompt=document.getElementById('resultadoReescrita').innerText; if(!prompt.includes('Reescreva')){ alert('Nada para copiar!'); return; } navigator.clipboard.writeText(prompt).then(()=>alert('✅ Copiado!')); }
+  function limparCamposReescrita(){ document.getElementById('textoOriginal').value=''; document.getElementById('estiloReescrita').value='formal'; document.getElementById('idiomaReescrita').value='português'; document.getElementById('resultadoReescrita').innerText='Preencha o texto, escolha o estilo e o idioma para gerar o prompt.'; }
+
+  // ===== Gospel =====
+  async function gerarPromptGospel(){ 
+    const hymnName=document.getElementById('hymnName').value.trim();
+    const style=document.getElementById('style').value;
+    const voice=document.getElementById('voice').value;
+    if(!hymnName){ alert('Preencha o nome do hino'); return; }
+    const hymnNameEn=await traduzir(hymnName,'en');
+    const promptMusic=`Classic 6/8 ${style} of the hymn "${hymnNameEn}" Hammond organ, blues piano, bass, soft drums, soulful guitar, "ooh/amen" choir, ${voice}, live church atmosphere.`;
+    document.getElementById('outputGospel').innerHTML=`<h2>🎵 Prompt Gerado</h2><p>${promptMusic}</p>`;
   }
-
-  function exportarTexto() {
-    if (partesGlobais.length === 0) return alert("Nenhuma parte para exportar.");
-    const blob = new Blob([partesGlobais.join("\n\n")], { type: 'text/plain' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'partes_traduzidas.txt';
-    link.click();
-  }
-
-  // ===== Gerador de Prompt para Reescrever Texto - Gemini =====
-  function gerarPromptReescrita() {
-    const texto = document.getElementById('textoOriginal').value.trim();
-    const estilo = document.getElementById('estiloReescrita').value;
-    const idioma = document.getElementById('idiomaReescrita').value;
-
-    if (!texto) {
-      alert('Por favor, insira o texto original.');
-      return;
-    }
-
-    const estilosPt = {
-      formal: 'formal, claro e profissional',
-      informal: 'informal, amigável e descontraído',
-      criativo: 'criativo e envolvente',
-      conciso: 'conciso e direto ao ponto',
-      explicativo: 'explicativo, detalhado e didático'
-    };
-
-    const estiloPt = estilosPt[estilo] || estilo;
-
-    const prompt = `Reescreva o texto abaixo em um estilo ${estiloPt}, preservando o significado original, mas usando palavras, frases e estruturas diferentes para evitar plágio. Garanta que o conteúdo seja único, fluido e natural. Escreva o texto em ${idioma}.\n\n"""${texto}"""`;
-
-    document.getElementById('resultadoReescrita').innerText = prompt;
-  }
-
-  function copiarPromptReescrita() {
-    const prompt = document.getElementById('resultadoReescrita').innerText;
-    if (!prompt || prompt.includes('Por favor, insira')) {
-      alert('Nada para copiar!');
-      return;
-    }
-    navigator.clipboard.writeText(prompt).then(() => {
-      alert('✅ Prompt copiado para a área de transferência!');
-    });
-  }
-
-  function limparCamposReescrita() {
-    document.getElementById('textoOriginal').value = '';
-    document.getElementById('estiloReescrita').value = 'formal';
-    document.getElementById('idiomaReescrita').value = 'português';
-    document.getElementById('resultadoReescrita').innerText = 'Preencha o texto, escolha o estilo e o idioma para gerar o prompt.';
-  }
+  function limparCamposGospel(){ document.getElementById('hymnName').value=''; document.getElementById('style').selectedIndex=0; document.getElementById('voice').selectedIndex=0; document.getElementById('outputGospel').innerText='Preencha o nome do hino e clique em "Gerar Prompt".'; }
+  function copiarPromptGospel(){ const prompt=document.getElementById('outputGospel').innerText; if(!prompt.includes('Preencha')){ navigator.clipboard.writeText(prompt).then(()=>alert('✅ Prompt Gospel copiado!')); } else { alert('Nada para copiar!'); } }
 </script>
+
 </body>
 </html>
