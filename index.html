@@ -15,6 +15,30 @@
   }
   h1 { color: #00ffff; text-align: center; margin-bottom: 30px; }
 
+  /* 🔥 Botões do Menu Superior */
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .menu-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #00ffff, #00ccff);
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .menu-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00ffff88;
+  }
+
   /* Abas */
   .tabs { display: flex; border-bottom: 2px solid #00ffff; margin-bottom: 20px; cursor: pointer; user-select: none; }
   .tab { flex: 1; padding: 12px 20px; text-align: center; background: #1a1a1a; color: #00ffff; font-weight: bold; border-radius: 8px 8px 0 0; margin-right: 4px; transition: background 0.3s; }
@@ -54,36 +78,26 @@
 </head>
 <body>
 
+<!-- 🔥 Menu Chamativo -->
 <nav class="menu">
-  <ul style="display: flex; gap: 10px; padding: 0; margin: 0; list-style: none;">
-    <li>
-      <a href="https://rass35.github.io/venda-50-prompts-youtube/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="menu-button">
-        50 Prompts para YouTube
-      </a>
-    </li>
-    <li>
-      <a href="https://rass35.github.io/300-prompts/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="menu-button">
-        300 Prompts para ChatGPT
-    </a>
-    </li>
-    <li>
-      <a href="https://rass35.github.io/1.800-prompt---pagina-de-vendas/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="menu-button">
-        1.800 Prompts para ChatGPT 
-      </a>
-    </li>
-  </ul>
+  <a href="https://rass35.github.io/venda-50-prompts-youtube/"
+     target="_blank" rel="noopener noreferrer" class="menu-button">
+    🎥 50 Prompts para YouTube
+  </a>
+
+  <a href="https://rass35.github.io/300-prompts/"
+     target="_blank" rel="noopener noreferrer" class="menu-button">
+    🤖 300 Prompts para ChatGPT
+  </a>
+
+  <a href="https://rass35.github.io/1.800-prompt---pagina-de-vendas/"
+     target="_blank" rel="noopener noreferrer" class="menu-button">
+    🚀 1.800 Prompts para ChatGPT
+  </a>
 </nav>
-  
-<h1>Ferramentas Inteligentes</h1>
+
+<h1>Ferramentas Inteligentes - Prompt e Tradutor</h1>
+
 
 <!-- Abas -->
 <div class="tabs">
