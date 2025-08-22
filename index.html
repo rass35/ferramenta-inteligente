@@ -13,9 +13,9 @@
     margin: 30px auto;
     padding: 20px;
   }
-  h1 { color: #ff4444; text-align: center; margin-bottom: 30px; }
+  h1 { color: #00ffff; text-align: center; margin-bottom: 30px; }
 
-  /* 🔥 Botões do Menu Superior */
+  /* 🔥 Botões do Menu Superior - apenas estes em vermelho */
   .menu {
     display: flex;
     justify-content: center;
@@ -39,41 +39,41 @@
     box-shadow: 0 0 20px #ff4444aa;
   }
 
-  /* Abas Vermelhas */
-  .tabs { display: flex; border-bottom: 2px solid #ff4444; margin-bottom: 20px; cursor: pointer; user-select: none; }
-  .tab { flex: 1; padding: 12px 20px; text-align: center; background: #1a1a1a; color: #ff4444; font-weight: bold; border-radius: 8px 8px 0 0; margin-right: 4px; transition: background 0.3s; }
+  /* Abas */
+  .tabs { display: flex; border-bottom: 2px solid #00ffff; margin-bottom: 20px; cursor: pointer; user-select: none; }
+  .tab { flex: 1; padding: 12px 20px; text-align: center; background: #1a1a1a; color: #00ffff; font-weight: bold; border-radius: 8px 8px 0 0; margin-right: 4px; transition: background 0.3s; }
   .tab:last-child { margin-right: 0; }
-  .tab.active { background: #ff4444; color: #fff; cursor: default; }
+  .tab.active { background: #00ffff; color: #000; cursor: default; }
 
   /* Conteúdo das abas */
-  .tab-content { background: #1f1f1f; padding: 20px; border-radius: 0 8px 8px 8px; box-shadow: 0 0 15px #ff444466; display: none; }
+  .tab-content { background: #1f1f1f; padding: 20px; border-radius: 0 8px 8px 8px; box-shadow: 0 0 15px #00ffff66; display: none; }
   .tab-content.active { display: block; }
 
-  label { display: block; margin-top: 15px; font-weight: bold; color: #ff4444; }
-  input, textarea, select, button { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #ff4444; background: #1a1a1a; color: #ff4444; font-size: 16px; box-sizing: border-box; }
+  label { display: block; margin-top: 15px; font-weight: bold; color: #00ffff; }
+  input, textarea, select, button { width: 100%; padding: 10px; margin-top: 6px; border-radius: 8px; border: 1px solid #00ffff; background: #1a1a1a; color: #00ffcc; font-size: 16px; box-sizing: border-box; }
   textarea { resize: vertical; }
-  button { margin-top: 20px; background: linear-gradient(145deg, #ff4444, #cc0000); color: #fff; font-weight: bold; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; border: none; }
-  button:hover:not(:disabled) { transform: scale(1.05); box-shadow: 0 0 15px #ff4444; }
-  button:active:not(:disabled) { box-shadow: 0 0 25px #ff4444, inset 0 0 10px #ff4444; }
+  button { margin-top: 20px; background: linear-gradient(145deg, #00ffff, #00ccff); color: #000; font-weight: bold; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; border: none; }
+  button:hover:not(:disabled) { transform: scale(1.05); box-shadow: 0 0 15px #00ffff; }
+  button:active:not(:disabled) { box-shadow: 0 0 25px #00ffff, inset 0 0 10px #00ffff; }
   button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-  #resultado, #saida, #resultadoReescrita, #outputGospel { margin-top: 10px; background: #121212; padding: 15px; border-radius: 8px; white-space: pre-wrap; font-family: monospace; color: #ff4444; min-height: 110px; }
+  #resultado, #saida, #resultadoReescrita, #outputGospel { margin-top: 10px; background: #121212; padding: 15px; border-radius: 8px; white-space: pre-wrap; font-family: monospace; color: #00ffcc; min-height: 110px; }
 
   #resultado-container { display: flex; align-items: center; justify-content: space-between; margin-top: 25px; }
-  #resultado-label, #resultado-label-reescrita { color: #ff4444; font-weight: bold; font-size: 1.2em; }
+  #resultado-label, #resultado-label-reescrita { color: #00ffff; font-weight: bold; font-size: 1.2em; }
   #copiarBtn { width: auto; max-width: 150px; padding: 8px 15px; font-size: 14px; }
   #erro { margin-top: 10px; color: #ff4444; font-weight: bold; }
 
-  #piclumenLink a { display: inline-block; padding: 12px 20px; background: #cc0000; color: #fff; font-weight: bold; border-radius: 8px; text-decoration: none; transition: background 0.3s; }
-  #piclumenLink a:hover { background: #ff4444; }
+  #piclumenLink a { display: inline-block; padding: 12px 20px; background: #00ccff; color: #000; font-weight: bold; border-radius: 8px; text-decoration: none; transition: background 0.3s; }
+  #piclumenLink a:hover { background: #00aacc; }
 
   #botoes, #botoesReescrita, #botoesGospel { display: flex; gap: 15px; margin-top: 20px; }
   #botoes button, #botoesReescrita button, #botoesGospel button { flex: 1; }
 
-  .bloco { background: #121212; border: 1px solid #ff4444; border-radius: 8px; padding: 15px; margin-bottom: 15px; white-space: pre-wrap; box-shadow: 0 0 10px #ff444488; position: relative; }
-  .copiar { position: absolute; top: 10px; right: 10px; background: #ff4444; color: #fff; border: none; border-radius: 5px; padding: 4px 8px; font-size: 12px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-  .copiar:hover { transform: scale(1.1); box-shadow: 0 0 10px #ff4444; }
-  .copiar:active { box-shadow: 0 0 15px #ff4444, inset 0 0 5px #ff4444; }
+  .bloco { background: #121212; border: 1px solid #00cccc; border-radius: 8px; padding: 15px; margin-bottom: 15px; white-space: pre-wrap; box-shadow: 0 0 10px #00cccc88; position: relative; }
+  .copiar { position: absolute; top: 10px; right: 10px; background: #00cccc; color: #000; border: none; border-radius: 5px; padding: 4px 8px; font-size: 12px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+  .copiar:hover { transform: scale(1.1); box-shadow: 0 0 10px #00ffff; }
+  .copiar:active { box-shadow: 0 0 15px #00ffff, inset 0 0 5px #00ffff; }
 </style>
 </head>
 <body>
@@ -99,7 +99,6 @@
      target="_blank" rel="noopener noreferrer" class="menu-button">
     🤖 77 Agentes do ChatGPT
   </a>
-</nav>
 </nav>
 
 <h1>Ferramentas Inteligentes - Prompt e Tradutor</h1>
