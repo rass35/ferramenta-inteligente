@@ -59,9 +59,9 @@
 <!-- Abas -->
 <div class="tabs">
   <div class="tab active" data-tab="prompt">Gerador de Prompt para Thumbnail</div>
-  <div class="tab" data-tab="divisor">Divisor e Tradutor de Roteiro</div>
-  <div class="tab" data-tab="reescrita">Reescrever Roteiro</div>
-  <div class="tab" data-tab="gospel">Gerador de Prompt Suno Ai - Blues Gospel</div>
+  <div class="tab" data-tab="divisor">Divisor e Tradutor de Texto</div>
+  <div class="tab" data-tab="reescrita">Reescrever Texto - Gemini</div>
+  <div class="tab" data-tab="gospel">Gerador de Prompt Música Blues Gospel</div>
 </div>
 
 <!-- Aba Prompt Thumbnail -->
@@ -201,6 +201,15 @@
     <option value="smooth female voice">Feminina</option>
   </select>
 
+  <label for="tempoMusical">Compasso / Tempo:</label>
+  <select id="tempoMusical">
+    <option value="4/4">4/4 - Ritmo padrão, 4 tempos por compasso</option>
+    <option value="3/4">3/4 - Valsa, 3 tempos por compasso</option>
+    <option value="6/8" selected>6/8 - Swing/Blues, 6 tempos por compasso</option>
+    <option value="12/8">12/8 - Ritmo mais complexo, do tipo “shuffle” ou gospel mais arrastado</option>
+  </select>
+
+
   <div id="botoesGospel">
     <button onclick="gerarPromptGospel()">Gerar Prompt</button>
     <button onclick="limparCamposGospel()">Limpar</button>
@@ -296,14 +305,16 @@
 
   // ===== Gospel =====
   async function gerarPromptGospel(){ 
-    const hymnName=document.getElementById('hymnName').value.trim();
-    const style=document.getElementById('style').value;
-    const voice=document.getElementById('voice').value;
+    const hymnName = document.getElementById('hymnName').value.trim();
+    const style = document.getElementById('style').value;
+    const voice = document.getElementById('voice').value;
+    const tempo = document.getElementById('tempoMusical').value; // Novo
     if(!hymnName){ alert('Preencha o nome do hino'); return; }
-    const hymnNameEn=await traduzir(hymnName,'en');
-    const promptMusic=`Classic 6/8 ${style} of the hymn "${hymnNameEn}" Hammond organ, blues piano, bass, soft drums, soulful guitar, "ooh/amen" choir, ${voice}, live church atmosphere.`;
+    const hymnNameEn = await traduzir(hymnName,'en');
+    const promptMusic = `Classic ${tempo} ${style} of the hymn "${hymnNameEn}" in English. Hammond organ, blues piano, bass, soft drums, soulful guitar, "ooh/amen" choir, ${voice}, live church atmosphere.`;
     document.getElementById('outputGospel').innerHTML=`<h2>🎵 Prompt Gerado</h2><p>${promptMusic}</p>`;
-  }
+}
+
   function limparCamposGospel(){ document.getElementById('hymnName').value=''; document.getElementById('style').selectedIndex=0; document.getElementById('voice').selectedIndex=0; document.getElementById('outputGospel').innerText='Preencha o nome do hino e clique em "Gerar Prompt".'; }
   function copiarPromptGospel(){ const prompt=document.getElementById('outputGospel').innerText; if(!prompt.includes('Preencha')){ navigator.clipboard.writeText(prompt).then(()=>alert('✅ Prompt Gospel copiado!')); } else { alert('Nada para copiar!'); } }
 </script>
