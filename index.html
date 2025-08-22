@@ -311,7 +311,7 @@
     const tempo = document.getElementById('tempoMusical').value; // Novo
     if(!hymnName){ alert('Preencha o nome do hino'); return; }
     const hymnNameEn = await traduzir(hymnName,'en');
-    const promptMusic = `Classic ${tempo} ${style} of the hymn "${hymnNameEn}" in English. Hammond organ, blues piano, bass, soft drums, soulful guitar, "ooh/amen" choir, ${voice}, live church atmosphere.`;
+    const promptMusic = `Classic ${tempo} ${style} of the hymn "${hymnNameEn}" Hammond organ, blues piano, bass, soft drums, soulful guitar, "ooh/amen" choir, ${voice}, live church atmosphere.`;
     document.getElementById('outputGospel').innerHTML=`<h2>🎵 Prompt Gerado</h2><p>${promptMusic}</p>`;
 }
 
